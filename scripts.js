@@ -1,11 +1,6 @@
-mapboxgl.accessToken =
+const token =
   "pk.eyJ1IjoiZ2FzdG9uY29kZXMiLCJhIjoiY2t3bWVhc2pvMGc0MjJvbXIyNTJoaTB5MiJ9.O6HwC8kOPxUXjcW8fGKlRw";
-const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/mapbox/streets-v11",
-  center: [-56.21743984, -34.83122403],
-  zoom: 10,
-});
+mapboxgl.accessToken = token;
 
 const ferias = {
   type: "FeatureCollection",
@@ -1544,41 +1539,101 @@ const ferias = {
   ],
 };
 
-// add markers to map
-for (const feature of ferias.features) {
-  // create a HTML element for each feature
-  const point = document.createElement("div");
-  point.className = "marker";
-  switch (feature.properties.dia) {
-    case "MARTES":
-      point.classList.add("marker-blue");
-      break;
-    case "MIERCOLES":
-      point.classList.add("marker-red");
-      break;
-    case "JUEVES":
-      point.classList.add("marker-green");
-      break;
-    case "VIERNES":
-      point.classList.add("marker-orange");
-      break;
-    case "SABADO":
-      point.classList.add("marker-violet");
-      break;
-    case "DOMINGO":
-      point.classList.add("marker-yellow");
-      break;
-    default:
-      break;
+const filterGroup = document.getElementById("filter-group");
+const map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/light-v10",
+  center: [-56.22407383481464, -34.852208273399015],
+  zoom: 11.5,
+});
+
+map.on("load", () => {
+  map.addSource("ferias", {
+    type: "geojson",
+    data: ferias,
+  });
+
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/ef476f/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("MARTES", image);
+    }
+  );
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/ffd166/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("MIERCOLES", image);
+    }
+  );
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/06d6a0/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("JUEVES", image);
+    }
+  );
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/118ab2/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("VIERNES", image);
+    }
+  );
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/073b4c/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("SABADO", image);
+    }
+  );
+  map.loadImage(
+    "https://img.icons8.com/material-rounded/24/9d4edd/marker.png",
+    (error, image) => {
+      if (error) throw error;
+      map.addImage("DOMINGO", image);
+    }
+  );
+
+  //marcadores
+
+  for (const feria of ferias.features) {
+    const day = feria.properties.dia;
+    const layerID = day;
+
+    // Add a layer for this symbol type if it hasn't been added already.
+    if (!map.getLayer(layerID)) {
+      map.addLayer({
+        id: layerID,
+        type: "symbol",
+        source: "ferias",
+        layout: {
+          "icon-image": day,
+          "icon-allow-overlap": true,
+        },
+        filter: ["==", "dia", day],
+      });
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.id = layerID;
+      input.checked = true;
+      input.classList.add(day.toLocaleLowerCase());
+      filterGroup.appendChild(input);
+
+      const label = document.createElement("label");
+      label.setAttribute("for", layerID);
+      label.textContent = day;
+      label.classList.add(day.toLocaleLowerCase());
+      filterGroup.appendChild(label);
+
+      input.addEventListener("change", e => {
+        map.setLayoutProperty(
+          layerID,
+          "visibility",
+          e.target.checked ? "visible" : "none"
+        );
+      });
+    }
   }
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(point)
-    .setLngLat(feature.geometry.coordinates)
-    .setPopup(
-      new mapboxgl.Popup({ offset: 25 }) // add popups
-        .setHTML(
-          `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
-        )
-    )
-    .addTo(map);
-}
+});

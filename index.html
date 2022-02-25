@@ -2,35 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mapa de ferias</title>
+    <title>Mapa Ferias</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
-
   <body>
-    <header><h1 class="title">Mapita Ferias</h1></header>
-    <section class="container">
-      <div class="mapContainer" id="map"></div>
-      <div class="filter">
-        <h3>Seleccione un dia</h3>
-        <select name="days" id="days">
-          <option value="lunes">Lunes</option>
-          <option value="martes">Martes</option>
-          <option value="miercoles">Miercoles</option>
-          <option value="jueves">Jueves</option>
-          <option value="viernes">Viernes</option>
-          <option value="sabado">Sabado</option>
-          <option value="domingo">Domingo</option>
-        </select>
-        <nav id="filter-group" class="filter-group"></nav>
-      </div>
-    </section>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <div id="map"></div>
+    <nav id="filter-group" class="filter-group"></nav>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
