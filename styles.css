@@ -5,18 +5,45 @@ body {
   padding: 0;
 }
 
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1;
+  display: none;
+}
+
+.float-hidden{
+  right: -160px;
+}
+
+.float-show{
+  right: 10px;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
 #map {
   position: absolute;
-  top: 0;
+  top: 0px;
   bottom: 0;
   width: 100%;
 }
 
 .filter-group {
-  font-size: 12px ;
+  font-size: 12px;
   font-weight: 600;
   position: absolute;
-  top: 10px;
+  top: 90px;
   right: 10px;
   z-index: 1;
   border-radius: 3px;
@@ -24,59 +51,66 @@ body {
   color: #fff;
 }
 
-.filter-group input[type="checkbox"]:first-child + label {
-  border-radius: 3px 3px 0 0;
-}
-
-.filter-group label:last-child {
-  border-radius: 0 0 3px 3px;
-  border: none;
+.filter-group input[type="checkbox"]:checked + label:before {
+  content: "✔";
+  margin-right: 5px;
 }
 
 .filter-group input[type="checkbox"] {
   display: none;
 }
 
-.filter-group input[type="checkbox"] + label {
-  background-color: #49fc02;
-  display: block;
-  cursor: pointer;
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.filter-group input[type="checkbox"] + label {
+input[type="checkbox"] + label {
+  color: darkgrey;
   background-color: #f6f6f4;
-  text-transform: capitalize;
-  
-}
-
-
-.filter-group input[type="checkbox"]:checked + label {
-  background-color: blue;
-}
-
-.filter-group input[type="checkbox"]:checked + label:before {
+  float: right;
+  display: block;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  width: 100%;
   content: "✔";
   margin-right: 5px;
 }
-
-input[type="checkbox"].martes {
+input[type="checkbox"]:checked + label {
+  float: right;
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+}
+input.martes[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #ef476f;
 }
-.miercoles {
+
+input.miercoles[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #ffd166;
 }
-.jueves {
+
+input.jueves[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #06d6a0;
 }
-.viernes {
+
+input.viernes[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #118ab2;
 }
-.sabado {
+
+input.sabado[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #073b4c;
 }
-.domingo {
+
+input.domingo[type="checkbox"]:checked + label {
+  font-style: normal;
   background-color: #9d4edd;
 }
 
@@ -87,4 +121,17 @@ input[type="checkbox"].martes {
 .mapboxgl-ctrl-bottom-left {
   display: none;
 }
-cambios
+
+@media only screen and (max-width: 768px) {
+  .filter-group{
+    display: none;
+  }
+  .float{
+    display: block;
+  }
+}
+/*
+Tengo que en la media query ponerle right -160
+
+y que aparezca el icono como boton y en el evento onclick le cambio el right a 10px de nuevo
+*/

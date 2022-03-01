@@ -22,6 +22,47 @@ const ferias = {
       type: "Feature",
       geometry: {
         type: "Point",
+        coordinates: [-56.13131504, -34.89323148],
+      },
+      properties: {
+        title: "ANDRES AGUIAR",
+        description: "ANDRES AGUIAR DESDE RAMON ANADOR HASTA SANTIAGO RIVAS",
+        tipo: "FERIA",
+        dia: "MIERCOLES",
+      },
+    },
+
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-56.16966736, -34.85755418],
+      },
+      properties: {
+        title: "BASILIO ARAUJO",
+        description: "BASILIO ARAUJO DESDE BRUNO MENDEZ A RAFAEL HORTIGUERA",
+        tipo: "FERIA",
+        dia: "JUEVES",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-56.14747933, -34.89541278],
+      },
+      properties: {
+        title: "AYACUCHO",
+        description:
+          "AYACUCHO DESDE GRAL. LAS HERAS HASTA EL Nº 331 HACIA LA CALLE MAIPU",
+        tipo: "FERIA",
+        dia: "VIERNES",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
         coordinates: [-56.10667908, -34.89356573],
       },
       properties: {
@@ -30,6 +71,19 @@ const ferias = {
           "ACEGUA DESDE CONCEPCION DEL URUGUAY HASTA HIPOLITO IRIGOYEN Y ALGUNOS MOVILES POR CONCEPCION DEL URUGUAY",
         tipo: "FERIA",
         dia: "SABADO",
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-56.17058928, -34.8658298],
+      },
+      properties: {
+        title: "ANDRES LAMAS",
+        description: "ANDRES LAMAS DE GRAL. FLORES A GUALAEGUAY",
+        tipo: "FERIA",
+        dia: "DOMINGO",
       },
     },
     {
@@ -56,32 +110,6 @@ const ferias = {
         description: "ACEVEDO DIAZ DESDE FCO. CANARO HASTA AV. RIVERA",
         tipo: "FERIA",
         dia: "SABADO",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [-56.13131504, -34.89323148],
-      },
-      properties: {
-        title: "ANDRES AGUIAR",
-        description: "ANDRES AGUIAR DESDE RAMON ANADOR HASTA SANTIAGO RIVAS",
-        tipo: "FERIA",
-        dia: "MIERCOLES",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [-56.17058928, -34.8658298],
-      },
-      properties: {
-        title: "ANDRES LAMAS",
-        description: "ANDRES LAMAS DE GRAL. FLORES A GUALAEGUAY",
-        tipo: "FERIA",
-        dia: "DOMINGO",
       },
     },
     {
@@ -127,20 +155,6 @@ const ferias = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [-56.14747933, -34.89541278],
-      },
-      properties: {
-        title: "AYACUCHO",
-        description:
-          "AYACUCHO DESDE GRAL. LAS HERAS HASTA EL Nº 331 HACIA LA CALLE MAIPU",
-        tipo: "FERIA",
-        dia: "VIERNES",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
         coordinates: [-56.15018037, -34.90163245],
       },
       properties: {
@@ -161,19 +175,6 @@ const ferias = {
         description: "BAGE Y GENERAL FLORES",
         tipo: "FERIA",
         dia: "MIERCOLES",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [-56.16966736, -34.85755418],
-      },
-      properties: {
-        title: "BASILIO ARAUJO",
-        description: "BASILIO ARAUJO DESDE BRUNO MENDEZ A RAFAEL HORTIGUERA",
-        tipo: "FERIA",
-        dia: "JUEVES",
       },
     },
     {
@@ -1620,13 +1621,12 @@ map.on("load", () => {
       input.checked = true;
       input.classList.add(day.toLocaleLowerCase());
       filterGroup.appendChild(input);
-
+      //li.appendChild(input);
       const label = document.createElement("label");
       label.setAttribute("for", layerID);
       label.textContent = day;
       label.classList.add(day.toLocaleLowerCase());
       filterGroup.appendChild(label);
-
       input.addEventListener("change", e => {
         map.setLayoutProperty(
           layerID,
@@ -1637,3 +1637,16 @@ map.on("load", () => {
     }
   }
 });
+
+
+//menu
+
+const hideMenu = () =>{
+  const days = document.getElementById("filter-group");
+  //days.classList.toggle("float-show");
+  if (days.style.display === "none") {
+    days.style.display = "block";
+  } else {
+    days.style.display = "none";
+  }
+}
