@@ -7,15 +7,16 @@ const ferias = {
   features: [
     {
       type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [-56.21743984, -34.83122403],
-      },
       properties: {
         title: "28 DE FEBRERO",
         description: "28 DE FEBRERO Y ELIAS REGULES",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [-56.21743984, -34.83122403],
       },
     },
     {
@@ -29,6 +30,7 @@ const ferias = {
         description: "ANDRES AGUIAR DESDE RAMON ANADOR HASTA SANTIAGO RIVAS",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
 
@@ -43,6 +45,7 @@ const ferias = {
         description: "BASILIO ARAUJO DESDE BRUNO MENDEZ A RAFAEL HORTIGUERA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -57,6 +60,7 @@ const ferias = {
           "AYACUCHO DESDE GRAL. LAS HERAS HASTA EL Nº 331 HACIA LA CALLE MAIPU",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -71,6 +75,7 @@ const ferias = {
           "ACEGUA DESDE CONCEPCION DEL URUGUAY HASTA HIPOLITO IRIGOYEN Y ALGUNOS MOVILES POR CONCEPCION DEL URUGUAY",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -84,6 +89,7 @@ const ferias = {
         description: "ANDRES LAMAS DE GRAL. FLORES A GUALAEGUAY",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -97,6 +103,7 @@ const ferias = {
         description: "ACEVEDO DIAZ ENTRE CANELONES Y CHARRUA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -110,6 +117,7 @@ const ferias = {
         description: "ACEVEDO DIAZ DESDE FCO. CANARO HASTA AV. RIVERA",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -123,6 +131,7 @@ const ferias = {
         description: "ANTONIO DIAZ DESDE MAZANGANO A CORONEL OLAVARRIA",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -136,6 +145,7 @@ const ferias = {
         description: "APARICIO SARAVIA Y CORONEL RAIZ",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -149,6 +159,7 @@ const ferias = {
         description: "ASILO Y LUIS ALBERTO DE HERRERA",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -162,6 +173,7 @@ const ferias = {
         description: "BADO DE LLAMBI A MC EACHEN",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -175,6 +187,7 @@ const ferias = {
         description: "BAGE Y GENERAL FLORES",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -188,6 +201,7 @@ const ferias = {
         description: "BRAILE Y CAMINO MALDONADO",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -201,6 +215,7 @@ const ferias = {
         description: "BRENDA DESDE AVDA. GRAL PAZ HASTA Nº 5819",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -214,6 +229,7 @@ const ferias = {
         description: "FCO. DE CALDAS ENTRE DALMIRO COSTA AL Nº 1612",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -227,6 +243,7 @@ const ferias = {
         description: "CAMINO GUERRA Y ARIES",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -240,6 +257,7 @@ const ferias = {
         description: "CANADA DESDE AVDA. BOLIVIA HASTA YAMANDU",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -253,6 +271,7 @@ const ferias = {
         description: "CAPITULARES Y ANTONIO MARIA MARQUEZ",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -266,6 +285,7 @@ const ferias = {
         description: "CARABELAS DESDE L.A. DE HERRERA HACIA REGIMIENTO",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -279,6 +299,7 @@ const ferias = {
         description: "CARAFI Y BVAR. BATLLE Y ORDOÑEZ",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -292,6 +313,7 @@ const ferias = {
         description: "CARLOS ANAYA DESDE Nº 2765 Y 2768 HASTA COMANDANTE BRAGA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -305,6 +327,7 @@ const ferias = {
         description: "CARLOS BERG DESDE BR. ESPAÑA HASTA Nº 2511",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -318,6 +341,7 @@ const ferias = {
         description: "CARLOS CROCKER DESDE 8 DE OCTUBRE HASTA FRAY BENTOS",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -332,6 +356,7 @@ const ferias = {
           "CARLOS DE LA VEGA DESDE CARLOS MARIA RAMIREZ HASTA Nº 4335",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -345,6 +370,7 @@ const ferias = {
         description: "CARLOS ROXLO ENTRE AV. URUGUAY Y PAYSANDU",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -358,6 +384,7 @@ const ferias = {
         description: "CHANA Y GABOTO",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -371,6 +398,7 @@ const ferias = {
         description: "CHARRUA ENTRE FCO. SOCA Y BRITO DEL PINO",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -384,6 +412,7 @@ const ferias = {
         description: "CHARRUA ENTRE PABLO DE MARIA Y BLANES",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -397,6 +426,7 @@ const ferias = {
         description: "CNO. EDISON DESDE AV. DE LAS INSTRUCCIONES A JENNER",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -410,6 +440,7 @@ const ferias = {
         description: "COLON Y RECONQUISTA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -423,6 +454,7 @@ const ferias = {
         description: "COLON ENTRE BUENOS AIRES Y RECONQUISTA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -436,6 +468,7 @@ const ferias = {
         description: "COLORADO Y MARSELLA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -449,6 +482,7 @@ const ferias = {
         description: "CONSTITUCION Y AMEZAGA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -462,6 +496,7 @@ const ferias = {
         description: "COUTURE Y AROCENA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -475,6 +510,7 @@ const ferias = {
         description: "COUTURE Y AROCENA",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -488,6 +524,7 @@ const ferias = {
         description: "DR. CROVETTO Y CAMBAY",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -501,6 +538,7 @@ const ferias = {
         description: "DEMOCRACIA DE HOCQUART A GENERAL PAGOLA",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -515,6 +553,7 @@ const ferias = {
           "DIEGO LAMAS ENTRE CAPITAN VIDELA Y FELICIANO RODRIGUEZ HASTA Nº 2867",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -528,6 +567,7 @@ const ferias = {
         description: "DOMINGO TORRES DESDE MAZANGANO HASTA EL Nº 4459 DE RAFFO",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -541,6 +581,7 @@ const ferias = {
         description: "DR. DECROLY DESDE AMAZONAS HASTA RIMAC",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -555,6 +596,7 @@ const ferias = {
           "DR. ANACLETO DUFORT Y ALVAREZ DESDE J.C. BLANCO A AGUIRRE",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -568,6 +610,7 @@ const ferias = {
         description: "DURAZNO ENTRE CONVENCIÓ Y WILSON FERREIRA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -581,6 +624,7 @@ const ferias = {
         description: "DUVIMIOSO TERRA DE NICARAGUA A HOCQUART",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -594,6 +638,7 @@ const ferias = {
         description: "EDUARDO RAIZ Y GARZON",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -607,6 +652,7 @@ const ferias = {
         description: "EMILIO CASTELAR Y BERRO",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -620,6 +666,7 @@ const ferias = {
         description: "EMILIO ROMERO DESDE AGRACIADA HASTA INDIA MUERTA",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -634,6 +681,7 @@ const ferias = {
           "ENRIQUE MARTINEZ DESDE FRENTE Nº 1337 HASTA CALLE PASAJE DE LOS ANDES",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -647,6 +695,7 @@ const ferias = {
         description: "ESTANISLAO LOPEZ ENTRE RIO DE LA PLATA Y ANDRES GOMEZ",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -660,6 +709,7 @@ const ferias = {
         description: "ESTERO BELLACO DESDE AV. CENTENARIO HASTA IBIRAPITA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -673,6 +723,7 @@ const ferias = {
         description: "FRANCISCO LEMOS DESDE GUENOAS A CHIBORAZO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -686,6 +737,7 @@ const ferias = {
         description: "GRANADEROS Y SAN MARTIN",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -699,6 +751,7 @@ const ferias = {
         description: "GUADALUPE ENTRE AV. GARIBALDI Y JOAQUIN REQUENA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -712,6 +765,7 @@ const ferias = {
         description: "GUTIERREZ RUIZ ENTRE CANELONES Y DURAZNO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -725,6 +779,7 @@ const ferias = {
         description: "HANSEN Y BESNES IRIGOYEN",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -738,6 +793,7 @@ const ferias = {
         description: "HERVIDERO ENTRE NASAZZI Y PROGRESO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -751,6 +807,7 @@ const ferias = {
         description: "HIMALAYA Y ESPARTILLO",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -764,6 +821,7 @@ const ferias = {
         description: "HUSARES ENTRE CAPURRO Y ALBERTO FLANGINI",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -777,6 +835,7 @@ const ferias = {
         description: "IGUA E HIPOLITO IRIGOYEN",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -790,6 +849,7 @@ const ferias = {
         description: "INGAVI ENTRE CANSTATT Y PASO DEL CUELLO",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -803,6 +863,7 @@ const ferias = {
         description: "ISLA DE FLORES DESDE GABOTO HASTA Nº 1780",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -816,6 +877,7 @@ const ferias = {
         description: "JAMAICA DESDE AVDA. BAUTISTA HASTA MURILLO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -829,6 +891,7 @@ const ferias = {
         description: "JOANICO Y ENRIQUE CLAY",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -842,6 +905,7 @@ const ferias = {
         description: "JOSE CATALA DESDE CADIZ A THOMPSON",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -855,6 +919,7 @@ const ferias = {
         description: "JUAN CABAL DESDE MONTE CASEROS HASTA Nº 2578",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -868,6 +933,7 @@ const ferias = {
         description: "JUAN MANUEL BLANESS DESDE DURAZNO HASTA EL Nº 966",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -881,6 +947,7 @@ const ferias = {
         description: "JUAN M. ESPINOSA Y AVDA. RIVERA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -894,6 +961,7 @@ const ferias = {
         description: "JUAN ORTIZ DESDE FRANCISCO SIMON HASTA EL 3157",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -907,6 +975,7 @@ const ferias = {
         description: "JUAN PAULLIER DESDE AVDA. RIVERA HASTA Nº 1482",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -920,6 +989,7 @@ const ferias = {
         description: "JULIO HERRERA Y OBES DESDE MALDONADO A DURAZNO",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -933,6 +1003,7 @@ const ferias = {
         description: "JULIO CESAR DE ITURRIAGA A 26 DE MARZO",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -946,6 +1017,7 @@ const ferias = {
         description: "LA GACETA DESDE Nº 1211 (26 DE MARZO) HASTA Nº 1280",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -959,6 +1031,7 @@ const ferias = {
         description: "LAMAS Y LIBERTAD",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -972,6 +1045,7 @@ const ferias = {
         description: "LOMBARDINO Y COMERCIO",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -985,6 +1059,7 @@ const ferias = {
         description: "LUIS DE LA TORRE DESDE BR. ARTIGAS HASTA JOAQUIN NUÑEZ",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -998,6 +1073,7 @@ const ferias = {
         description: "MANUEL ACUÑA Y MARCOS SALCEDO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -1012,6 +1088,7 @@ const ferias = {
           "MARCO BRUTO DESDE RIVERA HASTA Nº 1320 HACIA PLACIDO ELLAURI",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -1026,6 +1103,7 @@ const ferias = {
           "MARISCALA DESDE Nº1885 HASTA SAMUEL BLIXEN Y POR HASTA Nº 4376",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1039,6 +1117,7 @@ const ferias = {
         description: "MARTIN C. MARTINEZ DE GALLINAL A YAGUARI",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1052,6 +1131,7 @@ const ferias = {
         description: "MARTINEZ TRUEBA ENTRE MALDONADO Y DURAZNO",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1065,6 +1145,7 @@ const ferias = {
         description: "MAURICIO MATERLINK DESDE WATT HASTA Nº 4997",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1078,6 +1159,7 @@ const ferias = {
         description: "MELO ENTRE AGUIAR Y GENERAL LUNA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1091,6 +1173,7 @@ const ferias = {
         description: "MILLAN Y LUIS A. DE HERRERA",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1104,6 +1187,7 @@ const ferias = {
         description: "MILLAN Y LECOCQ",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1117,6 +1201,7 @@ const ferias = {
         description: "OSORIO DESDE FCO. MUÑOZ HASTA PLACIDO ELLAURI",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1130,6 +1215,7 @@ const ferias = {
         description: "OUNANIAN Y AGRACIADA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1143,6 +1229,7 @@ const ferias = {
         description: "OYARVIDE Y CAMINO MALDONADO",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1156,6 +1243,7 @@ const ferias = {
         description: "PABLO PEREZ Y LONDRES",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1169,6 +1257,7 @@ const ferias = {
         description: "PEDRO TRAPANI Y BAYONA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1182,6 +1271,7 @@ const ferias = {
         description: "PERNAS Y ASILO",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -1195,6 +1285,7 @@ const ferias = {
         description: "PIEDRA ALTA Y LIMA",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1208,6 +1299,7 @@ const ferias = {
         description: "PILAR COSTA E INDIA MUERTA",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1222,6 +1314,7 @@ const ferias = {
           "PILCOMAYO DESDE GALLINAL HACIA MISSISIPI HASTA EL Nº 5274",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -1235,6 +1328,7 @@ const ferias = {
         description: "PINTA Y PLAZA 12 DE DICIEMBRE",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1248,6 +1342,7 @@ const ferias = {
         description: "QUESADA Y HOMERO DE GREGORIO",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -1261,6 +1356,7 @@ const ferias = {
         description: "RAFAEL HORIGUERA DESDE NILO A ORTIZ DE ZARATE",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1274,6 +1370,7 @@ const ferias = {
         description: "RAMON MARQUEZ Y LUIS ALBERTO DE HERRERA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1287,6 +1384,7 @@ const ferias = {
         description: "ROMILDO RISSO Y CAMINO CARRASCO",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -1300,6 +1398,7 @@ const ferias = {
         description: "DE CASTRO A ARIEL",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -1313,6 +1412,7 @@ const ferias = {
         description: "SALTO DESDE SORIANO A SAN SALVADOR",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1326,6 +1426,7 @@ const ferias = {
         description: "SGO. VAZQUEZ DESDE GUAYAQUIL A MASSINI",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1335,10 +1436,11 @@ const ferias = {
         coordinates: [-56.16316026, -34.87174526],
       },
       properties: {
-        title: "SETEMBRINO PEREDA",
-        description: "SETEMBRINO PEREDA Y LUIS A. DE HERRERA",
+        title: "SETEMBRINO PE#06D6A0A",
+        description: "SETEMBRINO PE#06D6A0A Y LUIS A. DE HERRERA",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1352,6 +1454,7 @@ const ferias = {
         description: "SIMON BOLIVAR ENTRE PALMAR Y ENRIQUE POUEY",
         tipo: "FERIA",
         dia: "JUEVES",
+        color: "#06d6a0",
       },
     },
     {
@@ -1365,6 +1468,7 @@ const ferias = {
         description: "SIPE SIPE Y CASTRO",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1378,6 +1482,7 @@ const ferias = {
         description: "TACUABE Y SAYAGO",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1391,6 +1496,7 @@ const ferias = {
         description: "TIBURCIO GOMEZ ENTRE TOMAS GOMEZ Y COMODORO COE",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1404,6 +1510,7 @@ const ferias = {
         description: "TOMAS DIAGO DESDE BR. ESPAÑA A JAIME ZUDAÑEZ",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -1417,6 +1524,7 @@ const ferias = {
         description: "TRIUNFO Y CALOS DE LA VEGA",
         tipo: "FERIA",
         dia: "DOMINGO",
+        color: "#9d4edd",
       },
     },
     {
@@ -1430,6 +1538,7 @@ const ferias = {
         description: "VALENTIN GOMEZ Y AMADO NERVO",
         tipo: "FERIA",
         dia: "VIERNES",
+        color: "#118ab2",
       },
     },
     {
@@ -1443,6 +1552,7 @@ const ferias = {
         description: "AV. VENANCIO BENAVIDEZ ENTRE MICENAS Y REGIDORES",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1457,6 +1567,7 @@ const ferias = {
           "VERDI DESDE CIRCUNVALACIÓN LA PLAZA DE LOS OLIMPICOS AL 4561",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1470,6 +1581,7 @@ const ferias = {
         description: "VERONA ENTRE AVDA BOLIVIA Y SIRACUSA",
         tipo: "FERIA",
         dia: "MIERCOLES",
+        color: "#ffd166",
       },
     },
     {
@@ -1483,6 +1595,7 @@ const ferias = {
         description: "VICENZA Y AVDA. 8 DE OCTUBRE",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1496,6 +1609,7 @@ const ferias = {
         description: "VICTOR MANUEL DESDE FLORENCIA HASTA NAPOLES",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1509,6 +1623,7 @@ const ferias = {
         description: "VILLA BIARRITZ",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
     {
@@ -1522,6 +1637,7 @@ const ferias = {
         description: "VILLA BIARRITZ",
         tipo: "FERIA",
         dia: "SABADO",
+        color: "#073b4c",
       },
     },
     {
@@ -1535,6 +1651,7 @@ const ferias = {
         description: "VILLA VICENCIO Y SANTA LUCIA",
         tipo: "FERIA",
         dia: "MARTES",
+        color: "#ef476f",
       },
     },
   ],
@@ -1597,6 +1714,14 @@ map.on("load", () => {
     }
   );
 
+  const popUpGenerator = feria => {
+    return `<div class="popUp">
+    <h3 class="popUpTitle">${feria.title}</h3> 
+    <p class="popUpDay"><i class="fa-solid fa-calendar-day"></i> ${feria.dia}</p>
+    <p class="popUpDescription"><i class="fa-solid fa-location-dot"></i> ${feria.description}</p>  
+  </div>`;
+  };
+
   //marcadores
 
   for (const feria of ferias.features) {
@@ -1635,18 +1760,29 @@ map.on("load", () => {
         );
       });
     }
+
+    map.on("click", feria.properties.dia, e => {
+      const coordinates = e.features[0].geometry.coordinates.slice();
+
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(popUpGenerator(e.features[0].properties))
+        .addTo(map);
+    });
   }
 });
 
-
 //menu
 
-const hideMenu = () =>{
+const hideMenu = () => {
   const days = document.getElementById("filter-group");
-  //days.classList.toggle("float-show");
   if (days.style.display === "none") {
     days.style.display = "block";
   } else {
     days.style.display = "none";
   }
-}
+};
