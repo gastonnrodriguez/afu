@@ -2491,7 +2491,7 @@ map.on("load", () => {
     <h3 class="popUpTitle">${feria.title}</h3> 
     <p class="popUpDay"><i class="fa-solid fa-calendar-day"></i> ${feria.dia}</p>
     <p class="popUpDescription"><i class="fa-solid fa-location-dot"></i> ${feria.description}</p>  
-    <a href="https://afu.uy/feriantes/">Ver feriantes</a>
+    <p class="popUpLink"><a href="https://afu.uy/feriantes/"><i class="fa-solid fa-store"></i> Ver feriantes</a></p>
   </div>`;
   };
   const colorPicker = municipio => {
