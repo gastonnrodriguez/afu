@@ -2491,7 +2491,6 @@ map.on("load", () => {
     <h3 class="popUpTitle">${feria.title}</h3> 
     <p class="popUpDay"><i class="fa-solid fa-calendar-day"></i> ${feria.dia}</p>
     <p class="popUpDescription"><i class="fa-solid fa-location-dot"></i> ${feria.description}</p>  
-    <a href="https://afu.uy/feriantes/">Ver feriantes</a>
   </div>`;
   };
   const colorPicker = municipio => {
@@ -2557,53 +2556,29 @@ map.on("load", () => {
     const day = feria.properties.dia;
     const layerID = day;
     // Add a layer for this symbol type if it hasn't been added already.
-    if (!map.getLayer(layerID)) {
-      map.addLayer({
-        id: layerID,
-        type: "symbol",
-        source: "ferias",
-        layout: {
-          "icon-image": day,
-          "icon-allow-overlap": true,
-        },
-        filter: ["==", "dia", day],
-      });
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      input.id = layerID;
-      input.checked = true;
-      input.classList.add(day.toLocaleLowerCase());
-      filterGroup.appendChild(input);
-      const label = document.createElement("label");
-      label.setAttribute("for", layerID);
-      label.textContent = day;
-      label.classList.add(day.toLocaleLowerCase());
-      filterGroup.appendChild(label);
-      input.addEventListener("change", e => {
-        map.setLayoutProperty(
-          layerID,
-          "visibility",
-          e.target.checked ? "visible" : "none"
-        );
-      });
-    }
+    const el = document.createElement("div");
+    el.className = "marker";
 
-    map.on("click", feria.properties.dia, e => {
-      const coordinates = e.features[0].geometry.coordinates.slice();
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el).setLngLat(feria.geometry.coordinates).addTo(map);
 
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
-
-      new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(popUpGenerator(e.features[0].properties))
-        .addTo(map);
-
-      const btnComercios = document.getElementById("btnComercios");
-      btnComercios.addEventListener("click", e => {
-        console.log("Button clicked");
-      });
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = layerID;
+    input.checked = true;
+    input.classList.add(day.toLocaleLowerCase());
+    filterGroup.appendChild(input);
+    const label = document.createElement("label");
+    label.setAttribute("for", layerID);
+    label.textContent = day;
+    label.classList.add(day.toLocaleLowerCase());
+    filterGroup.appendChild(label);
+    input.addEventListener("change", e => {
+      map.setLayoutProperty(
+        layerID,
+        "visibility",
+        e.target.checked ? "visible" : "none"
+      );
     });
   }
 });

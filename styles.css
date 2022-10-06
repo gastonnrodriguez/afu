@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -9,7 +10,7 @@ body {
   position: fixed;
   width: 45px;
   height: 45px;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   background-color: white;
   color: black;
@@ -20,11 +21,11 @@ body {
   display: none;
 }
 
-.float-hidden{
+.float-hidden {
   right: -160px;
 }
 
-.float-show{
+.float-show {
   right: 10px;
 }
 
@@ -51,7 +52,7 @@ body {
   color: #fff;
 }
 
-.filter-group input[type="checkbox"]:checked + label:before {
+.filter-group input[type="checkbox"]:checked+label:before {
   content: "✔";
   margin-right: 5px;
 }
@@ -60,7 +61,7 @@ body {
   display: none;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"]+label {
   color: darkgrey;
   background-color: #f6f6f4;
   float: right;
@@ -74,7 +75,8 @@ input[type="checkbox"] + label {
   content: "✔";
   margin-right: 5px;
 }
-input[type="checkbox"]:checked + label {
+
+input[type="checkbox"]:checked+label {
   float: right;
   display: block;
   color: white;
@@ -84,32 +86,33 @@ input[type="checkbox"]:checked + label {
   font-size: 17px;
   width: 100%;
 }
-input.martes[type="checkbox"]:checked + label {
+
+input.martes[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #ef476f;
 }
 
-input.miercoles[type="checkbox"]:checked + label {
+input.miercoles[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #ffd166;
 }
 
-input.jueves[type="checkbox"]:checked + label {
+input.jueves[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #06d6a0;
 }
 
-input.viernes[type="checkbox"]:checked + label {
+input.viernes[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #118ab2;
 }
 
-input.sabado[type="checkbox"]:checked + label {
+input.sabado[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #073b4c;
 }
 
-input.domingo[type="checkbox"]:checked + label {
+input.domingo[type="checkbox"]:checked+label {
   font-style: normal;
   background-color: #9d4edd;
 }
@@ -122,19 +125,31 @@ input.domingo[type="checkbox"]:checked + label {
   display: none;
 }
 
-.popUpTitle{
+.popUpTitle {
   text-align: center;
 }
 
+/*prueba*/
+
+.marker {
+  background-image: url('mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 768px) {
-  .filter-group{
+  .filter-group {
     display: none;
   }
-  .float{
+
+  .float {
     display: block;
   }
 }
+
 /*
 Tengo que en la media query ponerle right -160
 
