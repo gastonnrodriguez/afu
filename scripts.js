@@ -2599,11 +2599,6 @@ map.on("load", () => {
         .setLngLat(coordinates)
         .setHTML(popUpGenerator(e.features[0].properties))
         .addTo(map);
-
-      const btnComercios = document.getElementById("btnComercios");
-      btnComercios.addEventListener("click", e => {
-        console.log("Button clicked");
-      });
     });
   }
 });
